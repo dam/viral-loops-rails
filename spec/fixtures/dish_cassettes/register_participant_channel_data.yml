@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.viral-loops.com/api/v2/events
+    body:
+      encoding: UTF-8
+      string: '{"apiToken":"token","params":{"event":"registration","user":{"firstname":"David","lastname":"Luiz","email":"dimberdis+luiz@liveqos.com"},"referrer":{"referralCode":"H1uHrwhl7"},"refSource":"email"}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.0/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jun 2018 16:06:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '41'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d234c82be33fd9506f33a7a8f04d42ca31528819560; expires=Wed, 12-Jun-19
+        16:06:00 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"29-b1ZaR+cChTVBJaAgsgz97P4QeZA"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 429d8feeda7399e6-EWR
+    body:
+      encoding: UTF-8
+      string: '{"referralCode":"SkZd1O6g7","isNew":true}'
+    http_version: 
+  recorded_at: Tue, 12 Jun 2018 16:06:01 GMT
+recorded_with: VCR 4.0.0

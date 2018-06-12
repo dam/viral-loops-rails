@@ -1,0 +1,74 @@
+PATH
+  remote: .
+  specs:
+    viral-loops-rails (0.1.0)
+      activesupport
+      httparty (= 0.16.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    concurrent-ruby (1.0.5)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    diff-lcs (1.3)
+    docile (1.3.1)
+    hashdiff (0.3.7)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
+    json (2.1.0)
+    minitest (5.11.3)
+    multi_xml (0.6.0)
+    public_suffix (3.0.2)
+    rake (10.5.0)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.1)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.1)
+    safe_yaml (1.0.4)
+    simplecov (0.16.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    vcr (4.0.0)
+    webmock (3.4.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16.a)
+  rake (~> 10.0)
+  rspec (~> 3.1)
+  simplecov
+  vcr
+  viral-loops-rails!
+  webmock
+
+BUNDLED WITH
+   1.16.0.pre.3
