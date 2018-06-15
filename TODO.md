@@ -1,2 +1,2 @@
-* make and test the different API calls
 * rails integration, do actions on signup etc...
+* update the README.md with real information

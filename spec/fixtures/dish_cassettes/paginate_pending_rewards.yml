@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.viral-loops.com/api/v2/pending_rewards?apiToken=token&filter%5Blimit%5D=2&filter%5Bskip%5D=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.0/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jun 2018 18:26:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '888'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd0197998fff7af8422650293f210dff01529087203; expires=Sat, 15-Jun-19
+        18:26:43 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"378-bRlPICB2IAFIUl7IMtG3t4SPnj4"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 42b7162dbec41876-EWR
+    body:
+      encoding: UTF-8
+      string: '{"pending":[{"user":{"firstname":"Conchita","lastname":"Martinez","email":"dimberdis+conchita@liveqos.com","referralCode":"rki7wDTxX","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_NTRlZjVjZWU0NmViNzcyNjU5MGU","metadata":{"reward":{"type":"manual","user":{"firstname":"Conchita","lastname":"Martinez","email":"dimberdis+conchita@liveqos.com","referralCode":"rki7wDTxX","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]},{"user":{"firstname":"David","lastname":"Luiz","email":"dimberdis+luiz@liveqos.com","referralCode":"SkZd1O6g7","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_NDk0ZmRiZTg0MGRmNTQxN2IwNmU","metadata":{"reward":{"type":"manual","user":{"firstname":"David","lastname":"Luiz","email":"dimberdis+luiz@liveqos.com","referralCode":"SkZd1O6g7","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]}],"totalPending":8}'
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 18:26:43 GMT
+recorded_with: VCR 4.0.0

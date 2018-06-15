@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.viral-loops.com/api/v2/pending_rewards?apiToken=token&user%5BreferralCode%5D=rkvwClJbX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.0/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 19:56:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '757'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc2e95a71a67e030196b233dea14ea7bd1529006165; expires=Fri, 14-Jun-19
+        19:56:05 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"2f5-ypwfGtXEyVpGyxIKX1Z0cukb4+o"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 42af5bb7f8b29236-EWR
+    body:
+      encoding: UTF-8
+      string: '{"pending":[{"user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"rewards":[{"id":"reward_Njg2ZTBmOGI2NGVlN2U0YTQyODg","metadata":{"reward":{"type":"manual","user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"details":{"rewardType":"manual"}}}},{"id":"reward_MTRkOWU4ZTI0NWY4NDQ2NjQ0NjQ","metadata":{"reward":{"user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}}]}],"totalPending":2}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 19:56:06 GMT
+recorded_with: VCR 4.0.0

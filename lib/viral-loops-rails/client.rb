@@ -20,9 +20,7 @@ module VLoopsRails
       validate_credentials!
     end
 
-    # TODO: they call it a participant
     # cf. https://intercom.help/viral-loops/refer-a-friend/refer-a-friend-http-api-reference
-    # TODO: make a test on the api with all the possible optional parameter
     def register(participant, referrer = nil, source = nil)
       opts = {}
       opts[:body] = {
@@ -41,7 +39,39 @@ module VLoopsRails
       opts[:body][:params]['refSource'] = source if %w[facebook twitter reddit email copy].include?(source)
 
       response = request(:post, '/v2/events', opts)
-      format_response(response)
+      format_response(response, true)
+    end
+
+    def get_data
+      opts = {}
+      opts[:query_params] = { 'apiToken' => @config[:api_token] }
+
+      response = request(:get, '/v2/participant_data', opts)
+      format_response(response, false, :data)
+    end
+
+    def pending_rewards(user = nil, filtering_opts = {})
+      opts = {}
+      opts[:query_params] = { 'apiToken' => @config[:api_token] }
+      opts[:query_params][:user] = { email: user[:email] } if user && user[:email].present?
+      opts[:query_params][:user] = { 'referralCode' => user[:referral_code] } if user && user[:referral_code].present?
+      opts[:query_params][:filter] = filtering_opts unless filtering_opts.empty?
+
+      response = request(:get, '/v2/pending_rewards', opts)
+      format_response(response, true)
+    end
+
+    def redeem(reward_id)
+      opts = {}
+      opts[:body] = { 'apiToken' => @config[:api_token] }
+      opts[:body]['rewardId'] = reward_id if reward_id.is_a?(String)
+      if reward_id.is_a?(Hash)
+        opts[:body][:user] = { 'referralCode': reward_id[:referral_code] } if reward_id[:referral_code].present?
+        opts[:body][:user] = { email: reward_id[:email] } if reward_id[:email].present?
+      end
+
+      response = request(:post, '/v2/rewarded', opts)
+      format_response(response, false, :redeemed)
     end
 
     private
@@ -61,8 +91,9 @@ module VLoopsRails
       req_opts = {
         method: http_method,
         headers: header_params,
-        params: query_params,
-        debug_output: (@config[:debug] ? $stderr : nil)
+        query: query_params,
+        debug_output: (@config[:debug] ? $stderr : nil),
+        timeout: @config[:timeout]
       }
 
       if %i[post patch put delete].include?(http_method)
@@ -94,13 +125,21 @@ module VLoopsRails
       data
     end
 
-    # TODO: manage errors, status, etc...
-    def format_response(http_party_response)
-      response = HashWithIndifferentAccess.new
-      JSON.parse(http_party_response.body).each { |k, v| response[k.underscore] = v }
+    def format_response(http_party_response, format = false, key_to_extract = nil)
+      parsed_response = JSON.parse(http_party_response.body, symbolize_names: true)
+
+      response =
+        if format
+          h = {}
+          parsed_response.each { |k, v| h[k.to_s.underscore.to_sym] = v }
+          h
+        else parsed_response
+        end
+
+      response = response[key_to_extract] if key_to_extract
       response
     rescue StandardError => e
-      p e.message
+      p e.message if @config[:debug]
       nil
     end
   end

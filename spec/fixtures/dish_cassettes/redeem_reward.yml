@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.viral-loops.com/api/v2/rewarded
+    body:
+      encoding: UTF-8
+      string: '{"apiToken":"token","rewardId":"reward_YjgwYjI1NTYxMjE5NmJhYzEwODc"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.0/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jun 2018 14:01:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '73'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de2a6506699f0cdb9b6bc91291bd186e61529071288; expires=Sat, 15-Jun-19
+        14:01:28 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"49-mpXXaEqBhk3GJ9Mko0zNWa8VPXk"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 42b591a26d5b91a0-EWR
+    body:
+      encoding: UTF-8
+      string: '{"redeemed":{"total":1,"rewards":["reward_YjgwYjI1NTYxMjE5NmJhYzEwODc"]}}'
+    http_version: 
+  recorded_at: Fri, 15 Jun 2018 14:01:29 GMT
+recorded_with: VCR 4.0.0

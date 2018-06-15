@@ -37,6 +37,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'simplecov'
 
-  spec.add_dependency 'httparty', '0.16.2'
+  spec.add_dependency 'httparty', '>= 0.10.0'
   spec.add_dependency 'activesupport'
 end

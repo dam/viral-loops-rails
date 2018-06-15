@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.viral-loops.com/api/v2/pending_rewards?apiToken=token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.0/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jun 2018 20:18:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d52cf77ad56fd9c8f6870f2eb40a1204a1529007528; expires=Fri, 14-Jun-19
+        20:18:48 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"14e6-Db6YGwwGEqPOfNIq+2q3Ew3DX1Y"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 42af7cfacb349a04-EWR
+    body:
+      encoding: UTF-8
+      string: '{"pending":[{"user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com","referralCode":"H1uHrwhl7","referralCountTotal":2,"risk":60},"rewards":[{"id":"reward_MTQ2MzNjYWIzNDk3ZTM1NTg1Yjc","metadata":{"reward":{"user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com","referralCode":"H1uHrwhl7","referralCountTotal":2,"risk":60},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_ZWE4NDllZGRiZDM4MjdlMDgyMGM","metadata":{"reward":{"user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com","referralCode":"H1uHrwhl7","referralCountTotal":2,"risk":60},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}}]},{"user":{"firstname":"Conchita","lastname":"Martinez","email":"dimberdis+conchita@liveqos.com","referralCode":"rki7wDTxX","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_NTRlZjVjZWU0NmViNzcyNjU5MGU","metadata":{"reward":{"type":"manual","user":{"firstname":"Conchita","lastname":"Martinez","email":"dimberdis+conchita@liveqos.com","referralCode":"rki7wDTxX","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]},{"user":{"firstname":"David","lastname":"Luiz","email":"dimberdis+luiz@liveqos.com","referralCode":"SkZd1O6g7","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_NDk0ZmRiZTg0MGRmNTQxN2IwNmU","metadata":{"reward":{"type":"manual","user":{"firstname":"David","lastname":"Luiz","email":"dimberdis+luiz@liveqos.com","referralCode":"SkZd1O6g7","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]},{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"rewards":[{"id":"reward_Y2MwMGVmZWVmZDRhZTFiODRkMjQ","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_ZWI5ZTYwMWM2NGU3YTdkZDA2NjE","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_YjgwYjI1NTYxMjE5NmJhYzEwODc","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_NDhmNDlkYjg3YjlmZTY3NWEyMWI","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}}]},{"user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"rewards":[{"id":"reward_Njg2ZTBmOGI2NGVlN2U0YTQyODg","metadata":{"reward":{"type":"manual","user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"details":{"rewardType":"manual"}}}},{"id":"reward_MTRkOWU4ZTI0NWY4NDQ2NjQ0NjQ","metadata":{"reward":{"user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}}]},{"user":{"firstname":"Roger","lastname":"Moore","email":"dimberdis+acceptref5@liveqos.com","referralCode":"SkszOeg_7","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_ZTQzMmRkY2ZlMmZkY2FiMjlhNGI","metadata":{"reward":{"type":"manual","user":{"firstname":"Roger","lastname":"Moore","email":"dimberdis+acceptref5@liveqos.com","referralCode":"SkszOeg_7","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]},{"user":{"firstname":"Pedro","lastname":"Sanchez","email":"dimberdis+acceptref6@liveqos.com","referralCode":"Syiu5egWQ","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_NzExMzRmMGJjODBlZmVkOWE0ZTQ","metadata":{"reward":{"type":"manual","user":{"firstname":"Pedro","lastname":"Sanchez","email":"dimberdis+acceptref6@liveqos.com","referralCode":"Syiu5egWQ","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]},{"user":{"firstname":"Luis","lastname":"Sanchez","email":"dimberdis+acceptref7@liveqos.com","referralCode":"Sk9fZZl_Q","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_YjA2NzVlOGEyNjI2NzE0NjJjZmU","metadata":{"reward":{"type":"manual","user":{"firstname":"Luis","lastname":"Sanchez","email":"dimberdis+acceptref7@liveqos.com","referralCode":"Sk9fZZl_Q","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]},{"user":{"firstname":"Sean","lastname":"Connery","email":"dimberdis+acceptref8@liveqos.com","referralCode":"SkGaUWlZQ","referralCountTotal":0,"risk":0},"rewards":[{"id":"reward_OTI1ZmQ5OThkYjE5YTQ4YTgwM2I","metadata":{"reward":{"type":"manual","user":{"firstname":"Sean","lastname":"Connery","email":"dimberdis+acceptref8@liveqos.com","referralCode":"SkGaUWlZQ","referralCountTotal":0,"risk":0},"details":{"rewardType":"manual"}}}}]}],"totalPending":14}'
+    http_version: 
+  recorded_at: Thu, 14 Jun 2018 20:18:48 GMT
+recorded_with: VCR 4.0.0

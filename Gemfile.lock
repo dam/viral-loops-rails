@@ -3,7 +3,7 @@ PATH
   specs:
     viral-loops-rails (0.1.0)
       activesupport
-      httparty (= 0.16.2)
+      httparty (>= 0.10.0)
 
 GEM
   remote: https://rubygems.org/
