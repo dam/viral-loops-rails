@@ -105,6 +105,17 @@ describe VLoopsRails::Client do
     end
   end
 
+  it 'has a method to scroll pending rewards, returning an iterable collection' do
+    VCR.use_cassette('scroll_pending_rewards', match_requests_on: [:path]) do
+      count = 0
+      client.scroll_pending_rewards(2).each do |rewards|
+        count += 1
+        expect(rewards[0][:user]).not_to be_empty
+      end
+      expect(count).to eq(4)
+    end
+  end
+
   it 'has a method to redeem a reward, specifying a reward id' do
     VCR.use_cassette('redeem_reward', match_requests_on: [:path]) do
       reward_id = 'reward_YjgwYjI1NTYxMjE5NmJhYzEwODc'

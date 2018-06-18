@@ -1,10 +1,7 @@
 require 'httparty'
 require 'json'
-require 'active_support/core_ext/string'
-require 'active_support/hash_with_indifferent_access'
 
 module VLoopsRails
-  class MisconfiguredClientError < StandardError; end
   class Client
     include HTTParty
     base_uri 'https://app.viral-loops.com/api'
@@ -39,7 +36,7 @@ module VLoopsRails
       opts[:body][:params]['refSource'] = source if %w[facebook twitter reddit email copy].include?(source)
 
       response = request(:post, '/v2/events', opts)
-      format_response(response, true)
+      VLoopsRails::Utils.format_response(response, true)
     end
 
     def get_data
@@ -47,7 +44,7 @@ module VLoopsRails
       opts[:query_params] = { 'apiToken' => @config[:api_token] }
 
       response = request(:get, '/v2/participant_data', opts)
-      format_response(response, false, :data)
+      VLoopsRails::Utils.format_response(response, false, :data)
     end
 
     def pending_rewards(user = nil, filtering_opts = {})
@@ -58,7 +55,14 @@ module VLoopsRails
       opts[:query_params][:filter] = filtering_opts unless filtering_opts.empty?
 
       response = request(:get, '/v2/pending_rewards', opts)
-      format_response(response, true)
+      VLoopsRails::Utils.format_response(response, true)
+    end
+
+    def scroll_pending_rewards(by = 25)
+      opts = { url: '/v2/pending_rewards', limit: by, format: true, key_to_extract: :pending }
+      opts[:query_params] = { 'apiToken' => @config[:api_token] }
+
+      ScrollCollectionProxy.new(self, opts)
     end
 
     def redeem(reward_id)
@@ -71,7 +75,7 @@ module VLoopsRails
       end
 
       response = request(:post, '/v2/rewarded', opts)
-      format_response(response, false, :redeemed)
+      VLoopsRails::Utils.format_response(response, false, :redeemed)
     end
 
     private
@@ -87,7 +91,6 @@ module VLoopsRails
       query_params = opts[:query_params] || {}
       form_params = opts[:form_params] || {}
 
-      # TODO: add extra parameters if needed
       req_opts = {
         method: http_method,
         headers: header_params,
@@ -123,24 +126,6 @@ module VLoopsRails
         data = nil
       end
       data
-    end
-
-    def format_response(http_party_response, format = false, key_to_extract = nil)
-      parsed_response = JSON.parse(http_party_response.body, symbolize_names: true)
-
-      response =
-        if format
-          h = {}
-          parsed_response.each { |k, v| h[k.to_s.underscore.to_sym] = v }
-          h
-        else parsed_response
-        end
-
-      response = response[key_to_extract] if key_to_extract
-      response
-    rescue StandardError => e
-      p e.message if @config[:debug]
-      nil
     end
   end
 end
