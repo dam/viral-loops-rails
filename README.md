@@ -8,23 +8,36 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'viral-loops-rails'
+gem 'viral-loops-rails', git: 'https://github.com/dam/viral-loops-rails'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
-
-    $ gem install viral-loops-rails
-
-## Usage
-
-### API endpoint currently implemented
+## API endpoint currently implemented
 
 * [Refer a friend endpoints](https://intercom.help/viral-loops/refer-a-friend/refer-a-friend-http-api-reference)
 * [Reward endpoints](https://intercom.help/viral-loops/refer-a-friend/api-rewarding)
+
+## Usage
+
+Configure the client:
+
+```ruby
+VLoopsRails.configure(api_token: 'your_api_token')
+```
+
+Then you can use the API:
+
+```ruby
+client = VLoopsRails::Client.new
+client.scroll_pending_rewards.each do |reward|
+  p reward
+end
+```
+
+Please look at the code inside the _spec/_ folder for examples.
 
 ## Development
 
