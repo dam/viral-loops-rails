@@ -5,7 +5,7 @@ http_interactions:
     uri: https://app.viral-loops.com/api/v2/rewarded
     body:
       encoding: UTF-8
-      string: '{"apiToken":"token","user":{"email":"dimberdis+acceptref4@liveqos.com"}}'
+      string: '{"apiToken":"token","user":{"email":"fake@email.com"}}'
     headers:
       Content-Type:
       - application/json

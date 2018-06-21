@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.viral-loops.com/api/v2/pending_rewards?apiToken=token&user%5BreferralCode%5D=rkvwClJbX
+    uri: https://app.viral-loops.com/api/v2/pending_rewards?apiToken=token&user%5BreferralCode%5D=code1
     body:
       encoding: US-ASCII
       string: ''
@@ -47,7 +47,7 @@ http_interactions:
       - 42af5bb7f8b29236-EWR
     body:
       encoding: UTF-8
-      string: '{"pending":[{"user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"rewards":[{"id":"reward_Njg2ZTBmOGI2NGVlN2U0YTQyODg","metadata":{"reward":{"type":"manual","user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"details":{"rewardType":"manual"}}}},{"id":"reward_MTRkOWU4ZTI0NWY4NDQ2NjQ0NjQ","metadata":{"reward":{"user":{"firstname":"James","lastname":"Rodriguez","email":"dimberdis+acceptref4@liveqos.com","referralCode":"rkvwClJbX","referralCountTotal":1,"risk":0},"details":{"rewardName":"50
+      string: '{"pending":[{"user":{"firstname":"James","lastname":"Rodriguez","email":"fake@email.com","referralCode":"code1","referralCountTotal":1,"risk":0},"rewards":[{"id":"reward_Njg2ZTBmOGI2NGVlN2U0YTQyODg","metadata":{"reward":{"type":"manual","user":{"firstname":"James","lastname":"Rodriguez","email":"fake@email.com","referralCode":"code1","referralCountTotal":1,"risk":0},"details":{"rewardType":"manual"}}}},{"id":"reward_MTRkOWU4ZTI0NWY4NDQ2NjQ0NjQ","metadata":{"reward":{"user":{"firstname":"James","lastname":"Rodriguez","email":"fake@email.com","referralCode":"code1","referralCountTotal":1,"risk":0},"details":{"rewardName":"50
         GB free data","rewardType":"manual"}}}}]}],"totalPending":2}'
     http_version: 
   recorded_at: Thu, 14 Jun 2018 19:56:06 GMT

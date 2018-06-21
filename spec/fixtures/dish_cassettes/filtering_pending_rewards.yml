@@ -47,8 +47,8 @@ http_interactions:
       - 42b7066d3d979236-EWR
     body:
       encoding: UTF-8
-      string: '{"pending":[{"user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com","referralCode":"H1uHrwhl7","referralCountTotal":2,"risk":60},"rewards":[{"id":"reward_MTQ2MzNjYWIzNDk3ZTM1NTg1Yjc","metadata":{"reward":{"user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com","referralCode":"H1uHrwhl7","referralCountTotal":2,"risk":60},"details":{"rewardName":"50
-        GB free data","rewardType":"manual"}}}},{"id":"reward_ZWE4NDllZGRiZDM4MjdlMDgyMGM","metadata":{"reward":{"user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com","referralCode":"H1uHrwhl7","referralCountTotal":2,"risk":60},"details":{"rewardName":"50
+      string: '{"pending":[{"user":{"firstname":"Damien","lastname":"Imberdis","email":"fake1@email.com","referralCode":"code1","referralCountTotal":2,"risk":60},"rewards":[{"id":"reward_MTQ2MzNjYWIzNDk3ZTM1NTg1Yjc","metadata":{"reward":{"user":{"firstname":"Damien","lastname":"Imberdis","email":"fake1@email.com","referralCode":"code1","referralCountTotal":2,"risk":60},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_ZWE4NDllZGRiZDM4MjdlMDgyMGM","metadata":{"reward":{"user":{"firstname":"Damien","lastname":"Imberdis","email":"fake1@email.com","referralCode":"code2","referralCountTotal":2,"risk":60},"details":{"rewardName":"50
         GB free data","rewardType":"manual"}}}}]}],"totalPending":8}'
     http_version: 
   recorded_at: Fri, 15 Jun 2018 18:15:58 GMT

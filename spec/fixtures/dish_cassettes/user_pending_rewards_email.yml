@@ -47,10 +47,10 @@ http_interactions:
       - 42af4d5c5c8b99f2-EWR
     body:
       encoding: UTF-8
-      string: '{"pending":[{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"rewards":[{"id":"reward_YjgwYjI1NTYxMjE5NmJhYzEwODc","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
-        GB free data","rewardType":"manual"}}}},{"id":"reward_ZWI5ZTYwMWM2NGU3YTdkZDA2NjE","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
-        GB free data","rewardType":"manual"}}}},{"id":"reward_Y2MwMGVmZWVmZDRhZTFiODRkMjQ","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
-        GB free data","rewardType":"manual"}}}},{"id":"reward_NDhmNDlkYjg3YjlmZTY3NWEyMWI","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"dimberdis+lemar@liveqos.com","referralCode":"SkfeD_Axm","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+      string: '{"pending":[{"user":{"firstname":"Thomas","lastname":"Lemar","email":"fake@email.com","referralCode":"code1","referralCountTotal":4,"risk":180},"rewards":[{"id":"reward_YjgwYjI1NTYxMjE5NmJhYzEwODc","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"fake@email.com","referralCode":"code1","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_ZWI5ZTYwMWM2NGU3YTdkZDA2NjE","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"fake@email.com","referralCode":"code1","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_Y2MwMGVmZWVmZDRhZTFiODRkMjQ","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"fake@email.com","referralCode":"code1","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
+        GB free data","rewardType":"manual"}}}},{"id":"reward_NDhmNDlkYjg3YjlmZTY3NWEyMWI","metadata":{"reward":{"user":{"firstname":"Thomas","lastname":"Lemar","email":"fake@email.com","referralCode":"code1","referralCountTotal":4,"risk":180},"details":{"rewardName":"50
         GB free data","rewardType":"manual"}}}}]}],"totalPending":4}'
     http_version: 
   recorded_at: Thu, 14 Jun 2018 19:46:18 GMT

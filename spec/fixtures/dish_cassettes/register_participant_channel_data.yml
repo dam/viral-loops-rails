@@ -5,7 +5,7 @@ http_interactions:
     uri: https://app.viral-loops.com/api/v2/events
     body:
       encoding: UTF-8
-      string: '{"apiToken":"token","params":{"event":"registration","user":{"firstname":"David","lastname":"Luiz","email":"dimberdis+luiz@liveqos.com"},"referrer":{"referralCode":"H1uHrwhl7"},"refSource":"email"}}'
+      string: '{"apiToken":"token","params":{"event":"registration","user":{"firstname":"David","lastname":"Luiz","email":"fake1@email.com"},"referrer":{"referralCode":"code1"},"refSource":"email"}}'
     headers:
       Content-Type:
       - application/json

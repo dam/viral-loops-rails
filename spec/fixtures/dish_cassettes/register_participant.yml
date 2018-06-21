@@ -5,7 +5,7 @@ http_interactions:
     uri: https://app.viral-loops.com/api/v2/events
     body:
       encoding: UTF-8
-      string: '{"apiToken":"token","params":{"event":"registration","user":{"firstname":"Damien","lastname":"Imberdis","email":"dimberdis@liveqos.com"}}}'
+      string: '{"apiToken":"token","params":{"event":"registration","user":{"firstname":"Damien","lastname":"Imberdis","email":"fake@email.com"}}}'
     headers:
       Content-Type:
       - application/json
