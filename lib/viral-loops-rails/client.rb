@@ -46,14 +46,12 @@ module VLoopsRails
       if participants && !participants.empty?
         opts[:query_params][:params] = { participants: [] }
         participants.each do |participant|
-          opts[:query_params][:params][:participants] << { email: participant[:email] } << { 'referralCode' => '' } if participant[:email].present?
-          opts[:query_params][:params][:participants] << { email: '' } << { 'referralCode' => participant[:referral_code] } if participant[:referral_code].present?
+          opts[:query_params][:params][:participants] << { email: participant[:email] } if participant[:email].present?
+          opts[:query_params][:params][:participants] << { 'referralCode' => participant[:referral_code] } if participant[:referral_code].present?
         end
       end
 
-      # opts[:query_params][:filter] = filtering_opts unless filtering_opts.empty?
-      opts[:query_params][:filter] = { limit: 50, skip: 0 }
-      pp opts
+      opts[:query_params][:filter] = filtering_opts unless filtering_opts.empty?
 
       response = request(:get, '/v2/participant_data', opts)
       VLoopsRails::Utils.format_response(response, true, :data)

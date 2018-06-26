@@ -83,6 +83,7 @@ describe VLoopsRails::Client do
   end
 
   it 'has a method to accept a batch of users identified by their emails' do
+    skip
     VCR.use_cassette('test', match_requests_on: [:path]) do
       user1 = { email: 'dimberdis+testvloops@liveqos.com' }
       user2 = { email: 'dimberdis+cc@liveqos.com' }
