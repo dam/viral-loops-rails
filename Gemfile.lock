@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    viral-loops-rails (0.1.0)
+    viral-loops-rails (0.1.1)
       activesupport
       httparty (>= 0.10.0)
 

@@ -39,12 +39,24 @@ module VLoopsRails
       VLoopsRails::Utils.format_response(response, true)
     end
 
-    def get_data
+    def get_data(participants = [], filtering_opts = {})
       opts = {}
       opts[:query_params] = { 'apiToken' => @config[:api_token] }
 
+      if participants && !participants.empty?
+        opts[:query_params][:params] = { participants: [] }
+        participants.each do |participant|
+          opts[:query_params][:params][:participants] << { email: participant[:email] } << { 'referralCode' => '' } if participant[:email].present?
+          opts[:query_params][:params][:participants] << { email: '' } << { 'referralCode' => participant[:referral_code] } if participant[:referral_code].present?
+        end
+      end
+
+      # opts[:query_params][:filter] = filtering_opts unless filtering_opts.empty?
+      opts[:query_params][:filter] = { limit: 50, skip: 0 }
+      pp opts
+
       response = request(:get, '/v2/participant_data', opts)
-      VLoopsRails::Utils.format_response(response, false, :data)
+      VLoopsRails::Utils.format_response(response, true, :data)
     end
 
     def pending_rewards(user = nil, filtering_opts = {})

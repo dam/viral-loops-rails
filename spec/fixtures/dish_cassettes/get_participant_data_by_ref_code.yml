@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.viral-loops.com/api/v2/participant_data?apiToken=token&params%5Bparticipants%5D%5B0%5D%5BreferralCode%5D=code1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.1/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 Jun 2018 03:00:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '615'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd48ff962723d4f4d2699292575e7193e1529809253; expires=Mon, 24-Jun-19
+        03:00:53 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"267-3srym2acnR+gVInqOClaMU1BsQk"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 42fbf257b92499f2-EWR
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"user":{"email":"fake@email.com","firstname":"David","lastname":"Luiz","referralCode":"code1","createdAt":"2018-06-12
+        16:06:01","uniqueLink":"http://app/sign_up?referralCode=code1"},"referrer":{"email":"fake2@email.com","firstname":"Damien","lastname":"Imberdis","referralCode":"code2","createdAt":"2018-06-11
+        21:10:24","uniqueLink":"http://app/sign_up?referralCode=code2"},"counters":{"referrals":{"total":0,"facebook":0,"twitter":0,"reddit":0,"email":0,"copy":0},"shares":{"total":0,"facebook":0,"twitter":0,"reddit":0,"email":0}}}]}'
+    http_version: 
+  recorded_at: Sun, 24 Jun 2018 03:00:53 GMT
+recorded_with: VCR 4.0.0

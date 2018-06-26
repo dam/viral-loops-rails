@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.viral-loops.com/api/v2/participant_data?apiToken=token&filter%5Blimit%5D=2&filter%5Bskip%5D=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - VLoopsRails/0.1.1/ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 Jun 2018 03:14:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '795'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=ddb2f743165a35e04bd938db02e6d30791529810089; expires=Mon, 24-Jun-19
+        03:14:49 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31b-2ZCSFyG/EwSNDwRcOEIZRI+q0Oo"
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 42fc06c05c0299e6-EWR
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"user":{"email":"fake@email.com","firstname":"Damien","lastname":"Imberdis","referralCode":"code1","createdAt":"2018-06-11
+        21:10:24","uniqueLink":"http://app/sign_up?referralCode=code1"},"referrer":{},"counters":{"referrals":{"total":2,"facebook":0,"twitter":0,"reddit":0,"email":1,"copy":0},"shares":{"total":0,"facebook":0,"twitter":0,"reddit":0,"email":0}}},{"user":{"email":"fake2@email.com","firstname":"Jon","lastname":"Baldock","referralCode":"code2","createdAt":"2018-06-12
+        15:11:06","uniqueLink":"http://app/sign_up?referralCode=code2"},"referrer":{},"counters":{"referrals":{"total":0,"facebook":0,"twitter":0,"reddit":0,"email":0,"copy":0},"shares":{"total":0,"facebook":0,"twitter":0,"reddit":0,"email":0}}}]}'
+    http_version: 
+  recorded_at: Sun, 24 Jun 2018 03:14:49 GMT
+recorded_with: VCR 4.0.0
