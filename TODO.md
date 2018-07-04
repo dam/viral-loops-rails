@@ -1,4 +1,5 @@
-* cover all the API endpoints, with all the options
-* Add helpers + bootstrap code to integrate widgets in a Rails app
-* build a demo RoR app
-* normalize keys inside nested resources API response
+* Refer a friend API endpoints
+- support a batch of user for the get_data endpoint (server bug?)
+
+* Refer a friend widget rails helper
+* Define a filter to auto import the previous widget

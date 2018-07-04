@@ -1,32 +1,32 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://app.viral-loops.com/api/v2/participant_data?apiToken=D7x8ltIkFpnp_yoeEsXXpNUWi9E&filter%5Blimit%5D=50&filter%5Bskip%5D=0&params%5Bparticipants%5D%5B0%5D%5Bemail%5D=dimberdis%2Btestvloops@liveqos.com&params%5Bparticipants%5D%5B0%5D%5BreferralCode%5D=&params%5Bparticipants%5D%5B1%5D%5Bemail%5D=dimberdis%2Bcc@liveqos.com&params%5Bparticipants%5D%5B1%5D%5BreferralCode%5D=
+    method: post
+    uri: https://app.viral-loops.com/api/v1/social_action
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"apiToken":"token","referralCode":"code1","postType":"facebook"}'
     headers:
       Content-Type:
       - application/json
       User-Agent:
-      - VLoopsRails/0.1.1/ruby
+      - VLoopsRails/0.1.2/ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 25 Jun 2018 14:57:06 GMT
+      - Wed, 04 Jul 2018 17:14:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '11'
+      - '15'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d9a6978be1b1b68720bae0c578a6a43da1529938626; expires=Tue, 25-Jun-19
-        14:57:06 GMT; path=/; domain=.viral-loops.com; HttpOnly
+      - __cfduid=d18501b7a5f245fc7c4a2744d108ca75b1530724489; expires=Thu, 04-Jul-19
+        17:14:49 GMT; path=/; domain=.viral-loops.com; HttpOnly
       X-Xss-Protection:
       - 1; mode=block
       X-Download-Options:
@@ -36,7 +36,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"b-EFAlOux7Kcr/ZEgGkn2r+oFAbu4"
+      - W/"f-VaSQ4oDUiZblZNAEkkN+sX+q3Sg"
       Vary:
       - Accept-Encoding
       Via:
@@ -46,10 +46,10 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 430848e01fdb99f2-EWR
+      - 43533af89c649a10-EWR
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
+      string: '{"status":"ok"}'
     http_version: 
-  recorded_at: Mon, 25 Jun 2018 14:57:06 GMT
+  recorded_at: Wed, 04 Jul 2018 17:14:49 GMT
 recorded_with: VCR 4.0.0

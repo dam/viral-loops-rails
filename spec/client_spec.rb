@@ -84,13 +84,11 @@ describe VLoopsRails::Client do
 
   it 'has a method to accept a batch of users identified by their emails' do
     skip
-    VCR.use_cassette('test', match_requests_on: [:path]) do
-      user1 = { email: 'dimberdis+testvloops@liveqos.com' }
-      user2 = { email: 'dimberdis+cc@liveqos.com' }
+    VCR.use_cassette('get_participant_data_by_batch', match_requests_on: [:path]) do
+      user1 = { email: 'fake1@email.com' }
+      user2 = { email: 'fake2@email.com' }
 
-
-      client2 = VLoopsRails::Client.new(api_token: 'D7x8ltIkFpnp_yoeEsXXpNUWi9E', debug: true)
-      res = client2.get_data([user1, user2])
+      res = client.get_data([user1, user2])
       pp res
     end
   end
@@ -184,6 +182,16 @@ describe VLoopsRails::Client do
       res = client.redeem(user)
       expect(res[:total]).to eq(2)
       expect(res[:rewards]).not_to be_empty
+    end
+  end
+
+  it 'has a method to track how many times a participant has invited others, returns true on success' do
+    VCR.use_cassette('track_inviting', match_requests_on: [:path]) do
+      user = { referral_code: 'code1' }
+      channel = 'facebook'
+
+      res = client.track(user, channel)
+      expect(res).to eq(true)
     end
   end
 end
