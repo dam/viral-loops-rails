@@ -15,7 +15,7 @@ And then execute:
 
     $ bundle install
     
-Then, create an intializer in your Rails application with the following code:
+Then, create an initializer in your Rails application with the following code:
 
 ```ruby
 require 'viral_loops_rails'
@@ -23,14 +23,23 @@ require 'viral_loops_rails'
 VLoopsRails.configure(api_token: 'token', campaign_id: 'campaign_id'])
 
 ActionView::Base.send :include, VLoopsRails::ScriptTagsHelper
+ActionController::Base.send :include, VLoopsRails::AutoInclude::Method
 ```
 
 ## How to integrate the widgets in your application
 
-You can include helpers direcrly in your template:
+You can include helpers directly in your template:
 
 ```erb
+<%= vloops_script_tag(type: :refer_a_friend, position: 'top-right') %>
+```
 
+Or add filters in your controllers:
+
+```ruby
+after_action only: :new do
+  vloops_rails_auto_include(type: :refer_a_friend, position: 'top-right')
+end
 ```
     
 ## Widgets currently implemented

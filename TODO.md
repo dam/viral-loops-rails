@@ -1,8 +1,7 @@
 
 # Version 0.1.3
 
-* Refer a friend widget rails view helper
-* Define a filter to auto import the previous widget
+* Debug Railtie initializer code
 
 # Known issues
 
