@@ -23,3 +23,12 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.allow_http_connections_when_no_cassette = true
 end
+
+def fake_action_view_class
+  klass = Class.new(Object)
+  klass.class_eval do
+    include VLoopsRails::ScriptTagsHelper
+    attr_reader :controller
+  end
+  klass
+end
