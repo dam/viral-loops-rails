@@ -8,7 +8,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'viral-loops-rails', git: 'https://github.com/dam/viral-loops-rails'
+gem 'viral-loops-rails', git: 'https://github.com/dam/viral-loops-rails', require: 'viral_loops_rails'
 ```
 
 And then execute:
@@ -21,9 +21,6 @@ Then, create an initializer in your Rails application with the following code:
 require 'viral_loops_rails'
 
 VLoopsRails.configure(api_token: 'token', campaign_id: 'campaign_id'])
-
-ActionView::Base.send :include, VLoopsRails::ScriptTagsHelper
-ActionController::Base.send :include, VLoopsRails::AutoInclude::Method
 ```
 
 ## How to integrate the widgets in your application

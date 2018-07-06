@@ -1,7 +1,11 @@
 
 # Version 0.1.3
 
-* Debug Railtie initializer code
+* Add tests and better code coverage, over 90%
+
+# Other
+
+* build a demo app
 
 # Known issues
 
