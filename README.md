@@ -8,19 +8,43 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'viral-loops-rails', git: 'https://github.com/dam/viral-loops-rails'
+gem 'viral-loops-rails', git: 'https://github.com/dam/viral-loops-rails', require: 'viral_loops_rails'
 ```
 
 And then execute:
 
     $ bundle install
+    
+Then, create an initializer in your Rails application with the following code:
 
-## API endpoint currently implemented
+```ruby
+require 'viral_loops_rails'
 
-* [Refer a friend endpoints](https://intercom.help/viral-loops/refer-a-friend/refer-a-friend-http-api-reference)
-* [Reward endpoints](https://intercom.help/viral-loops/refer-a-friend/api-rewarding)
+VLoopsRails.configure(api_token: 'token', campaign_id: 'campaign_id'])
+```
 
-## Usage
+## How to integrate the widgets in your application
+
+You can include helpers directly in your template:
+
+```erb
+<%= vloops_script_tag(type: :refer_a_friend, position: 'top-right') %>
+```
+
+Or add filters in your controllers:
+
+```ruby
+after_action only: :new do
+  vloops_rails_auto_include(type: :refer_a_friend, position: 'top-right')
+end
+```
+    
+## Widgets currently implemented
+
+* [Refer a Friend launcher](https://intercom.help/viral-loops/refer-a-friend/installation-instructions/refer-a-friend-html)
+
+
+## Usage of the API client
 
 Configure the client:
 
@@ -38,6 +62,11 @@ end
 ```
 
 Please look at the code inside the _spec/_ folder for examples.
+
+## API endpoint currently implemented
+
+* [Refer a friend endpoints](https://intercom.help/viral-loops/refer-a-friend/refer-a-friend-http-api-reference)
+* [Reward endpoints](https://intercom.help/viral-loops/refer-a-friend/api-rewarding)
 
 ## Development
 

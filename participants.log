@@ -1,7 +1,0 @@
-Run options: include {:locations=>{"./spec/client_spec.rb"=>[85]}}
-.
-
-Finished in 1.04 seconds (files took 0.46259 seconds to load)
-1 example, 0 failures
-
-Coverage report generated for RSpec to /Users/dimberdis/dev/perso/viral-loops-rails/coverage. 68 / 125 LOC (54.4%) covered.
