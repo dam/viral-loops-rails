@@ -1,10 +1,12 @@
-Dir[File.dirname(__FILE__) + '/viral-loops-rails/**/*.rb'].each do |file|
-  if File.basename(file, '.rb') == 'railtie'
-    require file if defined?(Rails)
-  else
-    require file
-  end
-end
+require 'viral-loops-rails/exceptions'
+require 'viral-loops-rails/utils'
+require 'viral-loops-rails/scroll_collection_proxy'
+require 'viral-loops-rails/campaigns/refer_a_friend'
+require 'viral-loops-rails/auto_include_filter'
+require 'viral-loops-rails/client'
+require 'viral-loops-rails/script_tags'
+require 'viral-loops-rails/script_tags_helper'
+require 'viral-loops-rails/railtie' if defined?(Rails::Railtie)
 
 module VLoopsRails
   @config = { api_token: nil, campaign_id: nil, debug: false, timeout: 60 }
