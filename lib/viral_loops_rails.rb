@@ -6,6 +6,7 @@ require 'viral-loops-rails/auto_include_filter'
 require 'viral-loops-rails/client'
 require 'viral-loops-rails/script_tags'
 require 'viral-loops-rails/script_tags_helper'
+require 'viral-loops-rails/version'
 require 'viral-loops-rails/railtie' if defined?(Rails::Railtie)
 
 module VLoopsRails
